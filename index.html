@@ -524,10 +524,10 @@
                     <span>© 2021 All rights reserved</span>
                 </div>
                 <nav class="nav" id="nav">
-                    <a class="nav__link" href="#" data-scroll="#about">About us</a>
-                    <a class="nav__link" href="#" data-scroll="#services">Team</a>
-                    <a class="nav__link" href="#" data-scroll="#blog">Portfolio</a>
-                    <a class="nav__link" href="#" data-scroll="#works">Contact us</a>
+                    <a class="footer__nav-link nav__link" href="#" data-scroll="#about">About us</a>
+                    <a class="footer__nav-link nav__link" href="#" data-scroll="#services">Team</a>
+                    <a class="footer__nav-link nav__link" href="#" data-scroll="#blog">Portfolio</a>
+                    <a class="footer__nav-link nav__link" href="#" data-scroll="#works">Contact us</a>
                 </nav>
                 <div class="footer__socials">
                     <a href="#" class="social">
@@ -566,10 +566,14 @@
             },
             slidesPerView: 'auto',
             loop:true,
+            spaceBetween:60,
             breakpoints:{
-                // 320:{
-                //     spaceBetween:30,
-                // }
+                320:{
+                    spaceBetween:30,
+                },
+                700:{
+                    spaceBetween:60,
+                }
             }
         })
     </script>
