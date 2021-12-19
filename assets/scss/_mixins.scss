@@ -1,0 +1,57 @@
+@mixin mainTitle {
+    font-family: $inter;
+    font-size: 46px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@mixin title {
+    font-family: $inter;
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@mixin bodyText {
+    font-family: $inter;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@mixin subTitle {
+    font-family: $inter;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@mixin menuText {
+    font-family: $inter;
+    font-size: 16px;
+    font-weight: 600;
+    color: $black;
+}
+
+@mixin formText {
+    font-family: $inter;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@mixin formTextSmall {
+    font-family: $inter;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+@mixin button {
+    font-family: $inter;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: $primary;
+    text-align: center;
+    display: inline-block;
+    color: $black;
+    height: 50px;
+}
