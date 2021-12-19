@@ -555,7 +555,7 @@
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/plugins/slick/slick.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <script>
@@ -564,21 +564,12 @@
             nextEl: '.button-next',
             prevEl: '.button-prev',
             },
-            slidesPerView: 4,
+            slidesPerView: 'auto',
             loop:true,
             spaceBetween:60,
             breakpoints:{
                 320:{
-                    slidesPerView: 1,
-                },
-                480:{
-                    slidesPerView: 2,
-                },
-                990:{
-                    slidesPerView: 3,
-                },
-                1290:{
-                    slidesPerView: 4,
+                    spaceBetween:30,
                 }
             }
         })

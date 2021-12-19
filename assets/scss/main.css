@@ -150,9 +150,11 @@ a {
 
 .team__item {
   /* margin: 0 30px; */
-  
+  width: 260px !important;
 }
-
+.team__header{
+  height: 324px;
+}
 .team__header img{
   width: 100%;
 }
@@ -550,7 +552,7 @@ font-size: 16px;
   top: 45%;
   z-index: 10;
   cursor:pointer;
-
+  opacity: 0.5;
 }
 .button-next{
   background-image: url(../images/next.png);
@@ -564,7 +566,7 @@ font-size: 16px;
   top: 45%;
   z-index: 10;
   cursor:pointer;
-
+  opacity: 0.5;
 }
 /* Бургер */
 .burger{
@@ -694,7 +696,6 @@ font-size: 16px;
   .agreement__wrapper{
     flex-direction: column;
   }
-  
 }
 @media screen and (max-width:565px) {
   .team-slider{
