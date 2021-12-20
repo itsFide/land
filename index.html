@@ -34,8 +34,53 @@
                     <form action="#" method="POST" class="popup__form">
                         <div class="popup_row">
                             <input class="name" type="text" name="name" placeholder="Name">
+                            <div class="hidden-message name-message">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_4_565" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="14" height="14">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.66679 1.00002C3.98679 1.00002 1.00012 3.98669 1.00012 7.66669C1.00012 11.3467 3.98679 14.3334 7.66679 14.3334C11.3468 14.3334 14.3335 11.3467 14.3335 7.66669C14.3335 3.98669 11.3468 1.00002 7.66679 1.00002ZM7.66679 8.33336C7.30012 8.33336 7.00012 8.03336 7.00012 7.66669V5.00002C7.00012 4.63336 7.30012 4.33336 7.66679 4.33336C8.03346 4.33336 8.33346 4.63336 8.33346 5.00002V7.66669C8.33346 8.03336 8.03346 8.33336 7.66679 8.33336ZM7.00012 9.66669V11H8.33346V9.66669H7.00012Z" fill="black"/>
+                                    </mask>
+                                    <g mask="url(#mask0_4_565)">
+                                    <rect width="16" height="16" fill="#DA1414"/>
+                                    </g>
+                                </svg>
+                                    
+                                    
+                                <div class="error-message">
+                                    Invalid name
+                                </div>
+                            </div>
                             <input class="email"type="email" name="email" placeholder="Email">
+                            <div class="hidden-message email-message">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_4_565" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="14" height="14">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.66679 1.00002C3.98679 1.00002 1.00012 3.98669 1.00012 7.66669C1.00012 11.3467 3.98679 14.3334 7.66679 14.3334C11.3468 14.3334 14.3335 11.3467 14.3335 7.66669C14.3335 3.98669 11.3468 1.00002 7.66679 1.00002ZM7.66679 8.33336C7.30012 8.33336 7.00012 8.03336 7.00012 7.66669V5.00002C7.00012 4.63336 7.30012 4.33336 7.66679 4.33336C8.03346 4.33336 8.33346 4.63336 8.33346 5.00002V7.66669C8.33346 8.03336 8.03346 8.33336 7.66679 8.33336ZM7.00012 9.66669V11H8.33346V9.66669H7.00012Z" fill="black"/>
+                                    </mask>
+                                    <g mask="url(#mask0_4_565)">
+                                    <rect width="16" height="16" fill="#DA1414"/>
+                                    </g>
+                                </svg>
+                                    
+                                    
+                                <div class="error-message">
+                                    Invalid email address
+                                </div>
+                            </div>
                             <input class="phone"type="tel"  name="phone" placeholder="Telephone">
+                            <div class="hidden-message phone-message">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_4_565" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="14" height="14">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.66679 1.00002C3.98679 1.00002 1.00012 3.98669 1.00012 7.66669C1.00012 11.3467 3.98679 14.3334 7.66679 14.3334C11.3468 14.3334 14.3335 11.3467 14.3335 7.66669C14.3335 3.98669 11.3468 1.00002 7.66679 1.00002ZM7.66679 8.33336C7.30012 8.33336 7.00012 8.03336 7.00012 7.66669V5.00002C7.00012 4.63336 7.30012 4.33336 7.66679 4.33336C8.03346 4.33336 8.33346 4.63336 8.33346 5.00002V7.66669C8.33346 8.03336 8.03346 8.33336 7.66679 8.33336ZM7.00012 9.66669V11H8.33346V9.66669H7.00012Z" fill="black"/>
+                                    </mask>
+                                    <g mask="url(#mask0_4_565)">
+                                    <rect width="16" height="16" fill="#DA1414"/>
+                                    </g>
+                                </svg>
+                                    
+                                    
+                                <div class="error-message">
+                                    Invalid phone number
+                                </div>
+                            </div>
                         </div>
                         <div class="popup_row">
                             <button type="submit" class="btn btnBook sumbit__popup-btn">Send</button>
@@ -524,26 +569,38 @@
   let formName = document.querySelector('.name');
   let phone = document.querySelector('.phone');
   let email = document.querySelector('.email');
+
+  let nameMessage = document.querySelector('.name-message');
+  let emailMessage = document.querySelector('.email-message');
+  let phoneMessage = document.querySelector('.phone-message');
+
+
   let regName = /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я ']+[a-zA-Zа-яА-Я']?$/u;
   let regEmail =  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
   let regPhone = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
   form.addEventListener('submit',(event)=>{
       event.preventDefault();   
        if(regName.test(formName.value)){
-           formName.classList.remove('error'); 
+            formName.classList.remove('error');
+            nameMessage.style.opacity = '0';
        } else{
         formName.classList.add('error');
+        nameMessage.style.opacity = '1';
        }
        
        if(regEmail.test(email.value)){
-        email.classList.remove('error'); 
+        email.classList.remove('error');
+        emailMessage.style.opacity = '0'; 
        } else{
         email.classList.add('error');
+        emailMessage.style.opacity = '1';
        }
        if(regPhone.test(phone.value)){
-        phone.classList.remove('error'); 
+        phone.classList.remove('error');
+        phoneMessage.style.opacity = '0'; 
        } else{
         phone.classList.add('error');
+        phoneMessage.style.opacity = '1';
        }
   })
 
