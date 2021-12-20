@@ -15,6 +15,37 @@
 />
 </head>
 <body>
+
+    <div class="popup__overlay">
+        <div class="popup">
+            <div class="popup__wrapper">
+                <div class="popup_close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2.54419" y="4.55423" width="2.84267" height="22.7414" transform="rotate(-45 2.54419 4.55423)" fill="black"/>
+                        <rect x="4.55444" y="20.6348" width="2.84267" height="22.7414" transform="rotate(-135 4.55444 20.6348)" fill="black"/>
+                    </svg>
+                </div>
+
+                <div class="popup__title">
+                    <h2>Registration</h2>
+                </div>
+
+                <div class="popup__form-wrapper">
+                    <form action="#" method="POST" class="popup__form">
+                        <div class="popup_row">
+                            <input class="name" type="text" name="name" placeholder="Name">
+                            <input class="email"type="email" name="email" placeholder="Email">
+                            <input class="phone"type="tel"  name="phone" placeholder="Telephone">
+                        </div>
+                        <div class="popup_row">
+                            <button type="submit" class="btn btnBook sumbit__popup-btn">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
         <header class="header">
             <div class="container">
                 <div class="header__inner">
@@ -75,103 +106,6 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eros, nullam porta netus ultrices congue. Pulvinar arcu, velit enim, tincidunt in. Arcu ut ut aliquam proin. Ultrices quam vulputate egestas arcu. Id fringilla nibh posuere arcu fermentum sed massa vitae gravida. Facilisi nunc, sit aenean magna. Quis viverra lacus, elementum vel molestie amet cras sit. Nullam adipiscing fermentum massa commodo sed quis id. Cras volutpat.</p>
             </div>
 
-            <!-- <div class="team-slider">
-                <div class="team__item">
-                    <div class="team__header">
-                        <img src="assets/images/member_1.png" alt="member">
-                    </div>
-                    <div class="team__footer">
-                        <div class="team__title">Anna</div>
-                        <div class="team__desc">
-                            Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team__item">
-                    <div class="team__header">
-                        <img src="assets/images/member_2.png" alt="member">
-                    </div>
-                    <div class="team__footer">
-                        <div class="team__title">Maria</div>
-                        <div class="team__desc">
-                            Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team__item">
-                    <div class="team__header">
-                        <img src="assets/images/member_3.png" alt="member">
-                    </div>
-                    <div class="team__footer">
-                        <div class="team__title">Roman</div>
-                            <div class="team__desc">
-                            Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum 
-                        </div>
-                    </div>
-                </div>
-
-                    <div class="team__item">
-                        <div class="team__header">
-                            <img src="assets/images/member_4.png" alt="member">
-                        </div>
-                        <div class="team__footer">
-                            <div class="team__title">Max</div>
-                            <div class="team__desc">
-                                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum 
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team__item">
-                        <div class="team__header">
-                            <img src="assets/images/member_5.png" alt="member">
-                        </div>
-                        <div class="team__footer">
-                            <div class="team__title">Kate</div>
-                            <div class="team__desc">
-                                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum 
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team__item">
-                        <div class="team__header">
-                            <img src="assets/images/member_6.png" alt="member">
-                        </div>
-                        <div class="team__footer">
-                            <div class="team__title">Dan</div>
-                            <div class="team__desc">
-                                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum 
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team__item">
-                        <div class="team__header">
-                            <img src="assets/images/member_7.png" alt="member">
-                        </div>
-                        <div class="team__footer">
-                            <div class="team__title">Jane</div>
-                            <div class="team__desc">
-                                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum 
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team__item">
-                        <div class="team__header">
-                            <img src="assets/images/member_8.png" alt="member">
-                        </div>
-                        <div class="team__footer">
-                            <div class="team__title">Max</div>
-                            <div class="team__desc">
-                                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum 
-                            </div>
-                        </div>
-                    </div>
-            </div> -->
 
             <!-- Slider main container -->
             <div class="team-slider">
@@ -519,6 +453,7 @@
     <footer class="footer">
        <div class="container">
             <div class="footer__inner">
+                
                 <div class="footer__logo">
                     <img src="assets/images/logo.svg" alt="logo">
                     <span>© 2021 All rights reserved</span>
@@ -564,18 +499,54 @@
             nextEl: '.button-next',
             prevEl: '.button-prev',
             },
-            slidesPerView: 'auto',
+            slidesPerView: 4,
             loop:true,
             spaceBetween:60,
             breakpoints:{
                 320:{
                     spaceBetween:30,
+                    slidesPerView: 1,
                 },
                 700:{
                     spaceBetween:60,
+                    slidesPerView: 2,
+                },
+                1215:{
+                    slidesPerView: 4,
                 }
             }
         })
+    </script>
+    <script>
+        // Валидация формы
+  let form = document.querySelector('.popup__form');
+  let formBtn = document.querySelector('.sumbit__popup-btn');
+  let formName = document.querySelector('.name');
+  let phone = document.querySelector('.phone');
+  let email = document.querySelector('.email');
+  let regName = /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я ']+[a-zA-Zа-яА-Я']?$/u;
+  let regEmail =  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  let regPhone = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+  form.addEventListener('submit',(event)=>{
+      event.preventDefault();   
+       if(regName.test(formName.value)){
+           formName.classList.remove('error'); 
+       } else{
+        formName.classList.add('error');
+       }
+       
+       if(regEmail.test(email.value)){
+        email.classList.remove('error'); 
+       } else{
+        email.classList.add('error');
+       }
+       if(regPhone.test(phone.value)){
+        phone.classList.remove('error'); 
+       } else{
+        phone.classList.add('error');
+       }
+  })
+
     </script>
 </body>
 </html>

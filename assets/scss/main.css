@@ -149,12 +149,8 @@ a {
 }
 
 .team__item {
-  /* margin: 0 30px; */
-  width: 260px !important;
 }
-.team__header{
-  height: 324px;
-}
+
 .team__header img{
   width: 100%;
 }
@@ -162,6 +158,7 @@ a {
 .team__footer {
   padding: 13px 19px;
   color: #000;
+  margin-top: -3px;
   background: #FE9A22; }
 
 .team__title {
@@ -322,20 +319,20 @@ a {
   height: 105px;
   resize: none; }
 
-.contact__form input::-webkit-input-placeholder, .contact__form textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder, .contact__form textarea::-webkit-input-placeholder {
   color: #333333;
   font-size: 16px; }
 
-.contact__form input:-ms-input-placeholder, .contact__form textarea:-ms-input-placeholder {
+input:-ms-input-placeholder, .contact__form textarea:-ms-input-placeholder {
   color: #333333;
   font-size: 16px; }
 
-.contact__form input::-ms-input-placeholder, .contact__form textarea::-ms-input-placeholder {
+input::-ms-input-placeholder, .contact__form textarea::-ms-input-placeholder {
   color: #333333;
   font-size: 16px; }
 
-.contact__form input::placeholder, .contact__form textarea::placeholder {
-  color: #333333;
+input::placeholder, .contact__form textarea::placeholder {
+  color: #837979;
   font-size: 16px; }
 
 .form__row {
@@ -622,6 +619,9 @@ font-size: 16px;
   right: 0;
   width: 100%;
 }
+.footer .nav{
+  display: flex;
+}
 .footer__nav-link{
   display: block !important;
 }
@@ -638,6 +638,10 @@ font-size: 16px;
   }
   .footer__inner{
     flex-direction: column;
+    height: auto;
+  }
+  .footer__socials{
+    padding-bottom: 10px;
   }
   .footer__logo{
     margin-bottom: 15px;
@@ -646,6 +650,7 @@ font-size: 16px;
   .footer__inner nav{
     margin-bottom: 15px;
   }
+
 }
 @media screen and (max-width:685px) {
   .burger{
@@ -710,6 +715,23 @@ font-size: 16px;
   .slick-prev{
     display: none !important;
   }
+  .footer__nav-link{
+    font-size: 10px;
+    padding-bottom: 10px;
+  }
+  .popup{
+    max-width: 95% !important;
+    width: 100% !important;
+  }
+  .popup__title{
+    font-size: 18px !important;
+  }
+  .btn{
+    font-size: 18px;
+  }
+  .btnBook{
+    max-width: 107px;
+  }
 }
 @media screen and (max-width:480px) {
   .promo__title{
@@ -719,4 +741,84 @@ font-size: 16px;
     font-size: 24px;
   }
   
+}
+
+
+
+
+
+/* Popup */
+
+.popup__overlay {
+  position: fixed; 
+  display: none;
+  width: 100%; 
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2; 
+  cursor: pointer;
+}
+
+.popup {
+  max-width: 500px;
+  background-color: #fff;
+  z-index: 99;
+  position: fixed;
+  width: 500px;
+  height: 400px;
+  /* top: 50%;
+  left: 50%; */
+  /* margin-top: -200px;
+  margin-left: -250px; */
+  display: none;
+  
+}
+
+.popup__wrapper {
+  padding: 25px 35px;
+}
+
+.popup_close {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+}
+
+.popup__title {
+  margin-top: 1px;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 26px;
+}
+
+.popup_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.popup__form input {
+  outline: none;
+  border: 1px solid #000000;
+  padding: 10px 13px;
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.popup__form button {
+  border: 0px;
+}
+
+.error {
+  border: 1px solid #DA1414 !important;
 }
